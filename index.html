@@ -8,10 +8,44 @@
 <hr>
 <h3>Our website (sparkSammy.com) is hibernating!</h3>
 <br><b><p>sparkSammy.com is hibernating for the holidays, from now until Christmas! Happy holidays, and a merry Christmas to all!</p></b>
-<div id="xcd3250" onclick=""><a id="xcda3250" target="_blank">Days Until Christmas</a><script src="https://www.days-until-christmas.co.uk/webcounts/xcd3250.js"></script></div>
+<!-- Display the countdown timer in an element -->
+<p id="demo"></p>
+
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("Dec 25, 2019 7:37:25").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  // Display the result in the element with id="demo"
+  document.getElementById("demo").innerHTML = days + " days, " + hours + " hours, "
+  + minutes + " minutes, or" + seconds + " seconds ";
+
+  // If the count down is finished, write some text
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "EXPIRED";
+  }
+}, 1000);
+</script>
+  
 <hr>
 <i><h3>A few links to spread the Christmas spirit!</h3>
 <br><b><a href="http://northpole.com">North Pole</a><a href="https://santatracker.google.com/">   Google Santa Tracker</a>
 <a href="https://www.noradsanta.org/">   Norad Tracks Santa (Starts December 1st)</a></b></i>
+
 </body>
 </html>
