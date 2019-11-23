@@ -15,7 +15,8 @@
 <script>
 //Credit to w3schools for this code!
 // Set the date we're counting down to
-var countDownDate = new Date("Dec 25, 2019 7:37:25").getTime();
+var year = new Date().getFullYear();
+var countDownDate = new Date("Dec 25, " + year + " 7:37:25").getTime();
 
 // Update the count down every 1 second
 var x = setInterval(function() {
