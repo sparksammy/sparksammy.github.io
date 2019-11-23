@@ -35,12 +35,11 @@ var x = setInterval(function() {
 
   // Display the result in the element with id="demo"
   document.getElementById("demo").innerHTML = days + " days, " + hours + " hours, "
-  + minutes + " minutes, and " + seconds + " seconds until Christmas 2019! ";
+  + minutes + " minutes, and " + seconds + " seconds until Christmas " + year + "!";
 
   // If the count down is finished, write some text
   if (distance < 0) {
-    clearInterval(x);
-    document.getElementById("demo").innerHTML = "Merry Christmas 2019!";
+    year = year + 1;
   }
 }, 1000);
 </script>
