@@ -1,53 +1,38 @@
 <!DOCTYPE html>
 <html>
-<head>
-<title>HIBERNATION</title>
-</head>
-<body>
-<h1>ERROR 569 - HIBERNATION</h1>
-<hr>
-<h3>Our website (sparkSammy.com) is hibernating!</h3>
-<br><b><p>sparkSammy.com is hibernating for the holidays, from now until Christmas! Happy holidays, and a merry Christmas to all!</p></b>
-<!-- CREDIT TO W3SCHOOLS BEGIN -->
-<!-- Display the countdown timer in an element -->
-<p id="demo"></p>
-
-<script>
-//Credit to w3schools for this code!
-// Set the date we're counting down to
-var year = new Date().getFullYear();
-var countDownDate = new Date("Dec 25, " + year + " 7:37:25").getTime();
-
-// Update the count down every 1 second
-var x = setInterval(function() {
-
-  // Get today's date and time
-  var now = new Date().getTime();
-
-  // Find the distance between now and the count down date
-  var distance = countDownDate - now;
-
-  // Time calculations for days, hours, minutes and seconds
-  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-  // Display the result in the element with id="demo"
-  document.getElementById("demo").innerHTML = days + " days, " + hours + " hours, "
-  + minutes + " minutes, and " + seconds + " seconds until Christmas " + year + "!";
-
-  // If the count down is finished, write some text
-  if (distance < 0) {
-    year = year + 1;
-  }
-}, 1000);
-</script>
-<!-- CREDIT TO W3SCHOOLS END -->
-<hr>
-<i><h3>A few links to spread the Christmas spirit!</h3>
-<br><b><a href="http://northpole.com">North Pole</a><a href="https://santatracker.google.com/">   Google Santa Tracker</a>
-<a href="https://www.noradsanta.org/">   Norad Tracks Santa (Starts December 1st)</a></b></i>
-
-</body>
+  <head>
+    <link href="https://fonts.googleapis.com/css?family=Tomorrow&display=swap" rel="stylesheet"> 
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link href="https://fonts.googleapis.com/css?family=Orbitron|Supermercado+One&display=swap" rel="stylesheet"> 
+    <title>sparkSammy.com</title>
+    <script>
+    if (window.navigator.msPointerEnabled) {
+        location.href = '/old-browser'
+    }
+    </script>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div style="text-align: right;">
+    <img src="new-sparksammy-logo.png" width="25%">
+    </div>
+    <hr>
+    <p><a href="http://oklomsy.com">Oklomsy</a> <a href="/blog"> Blog</a> <a href="https://sparksammy.herokuapp.com/"> Projects</a> <a href="https://shop.spreadshirt.com/sparksammy/" target="_blank"> Merch</a> <a href="bbgroups/index.html" target="_blank"> Baldi's Basics Fan Groups</a> <a href="notewords-webpage/" target="_blank"> Notewords</a> <a href="/?notfd" target="_blank"> Why I don't use Facebook</a></p>
+    <hr>
+    <h1>Welcome to Sparksammy's site!</h1>
+    <div style="height: 100%; width: 100%; background-color: black; word-wrap: break;">
+      Welcome to sparkSammy.com! My name is Samuel Lord, but you can just call me Sparksammy. However, please spell the brand 'sparkSammy' as sparkSammy. If you see any silly posts from me on social media, they are probably from a long time ago or it's someone pretending to be me, so keep that in mind. Buy my merch if you want, however keep in mind I get only some of the profit, the rest goes to Spreadshirt. Most importantly, enjoy my website!
+    </div>
+    <strong><p id="quote">"Find a balance between freedom, comfort, and flexibility; as there is no such thing as full freedom." -- Sparksammy, 2018</p></strong>
+    <hr>
+    <p style="text-align: center;">Perhaps you could help me on 
+    <a href="https://github.com/sparksammy/">some of my projects?</a></p>
+    <hr>
+    <p style="text-align: center;">Copyright <script>var year = new Date().getFullYear(); document.write(year);</script> Samuel Lord. All rights reserved.</p>
+    <br>
+    <br>
+    <a id="secret" href="/secrets/friendship.html">What is this???</a>
+    <script src="secrets.js"></script>
+  </body>
 </html>
