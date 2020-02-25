@@ -12,33 +12,33 @@ div,p,h1,h2,h3,h4,h5,h6{
 
 
 h1 {
-  font-size: 3vw;
+  font-size: 3em;
 }
 
 h2{
-  font-size: 2.8vw;
+  font-size: 2.8em;
 }
 
 h3 {
-  font-size: 2.4vw;
+  font-size: 2.4em;
 }
 
 h4 {
-  font-size: 2.1vw;
+  font-size: 2.1em;
 }
 
 h5 {
-  font-size: 2vw;
+  font-size: 2em;
   font-style: oblique;
 }
 
 h6 {
-  font-size: 1.8vw;
+  font-size: 1.8em;
   font-style: oblique;
 }
 
 a {
-  font-size: 2vw;
+  font-size: 2em;
 }
 
 a:link {
