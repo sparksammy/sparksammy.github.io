@@ -21,10 +21,22 @@
             <p id="version">Version: </p>
             <p>Copyright Samuel Lord. All rights reserved. Created for Oklomsy with love.</p>
             <script>
-                var points = 0
-                var ver = "v1.0"
+                function cheatsDetected(cheat) {
+                    body = document.querySelector("body")
+                    body.innerHTML = "<h1>Super nice try.</h1><hr><p>Cheats detected: </p><br>" + cheat
+                }
+                var ver = "v1.01 - Inital Commit of Anti-cheat"
                 document.getElementById("version").innerHTML = document.getElementById("version").innerHTML + ver
+                var points = null
                 function givepoints() {
+                    dNew = new Date()
+                    tNew = dNew.getTime()
+                    console.log(tNew)
+                    if (typeof tOld !== 'undefined') {
+                        if (tNew - tOld < 100) {
+                            cheatsDetected("Auto-clicker")
+                        }
+                    }
                     points += 1
                     console.log(points)
                     document.getElementById("points").innerHTML = points
@@ -37,6 +49,9 @@
                     } else if (points == 5) {
                         document.getElementById("messages").innerHTML = document.getElementById("messages").innerHTML + "<br>This is only the beginning..."
                     }
+                    dOld = new Date()
+                    tOld = dOld.getTime()
+                    console.log(tOld)
                 }
             </script>
         </div>
