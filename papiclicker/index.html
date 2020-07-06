@@ -14,18 +14,19 @@
         <div align="center">
             <h1>Dog Clicker 2 - Papi Edition</h1>
             <h2>Click that dog!</h2>
-            <a href="#" onclick="givepoints()"><img style="border-radius: 15%;" width="30%" src="papi.png"></a>
+            <a href="#" onclick="givepoints()"><img style="border-radius: 15%;" width="15%" src="papi.png"></a>
             <h3>Points: </h3> <b><i id="points"></i></b><br>
             <p id="messages">Messages: </p>
             <hr>
             <p id="version">Version: </p>
             <p>Copyright Samuel Lord. All rights reserved. Created for Oklomsy with love.</p>
             <script>
+                var infActiveOnce = false
                 function cheatsDetected(cheat) {
                     body = document.querySelector("body")
                     body.innerHTML = "<h1>Super nice try.</h1><hr><p>Cheats detected: </p><br>" + cheat
                 }
-                var ver = "v1.01 - Inital Commit of Anti-cheat"
+                var ver = "v1.02 - Create an ending that's not impossible to get to."
                 document.getElementById("version").innerHTML = document.getElementById("version").innerHTML + ver
                 var points = null
                 function givepoints() {
@@ -39,7 +40,6 @@
                     }
                     points += 1
                     console.log(points)
-                    document.getElementById("points").innerHTML = points
                     var bark = new Audio('papi_bark.mp3');
                     bark.play();
                     if (points == 100) {
@@ -48,7 +48,16 @@
                         document.getElementById("messages").innerHTML = document.getElementById("messages").innerHTML + "<br>Fun fact: we joked around about creating a funcaptcha (example: ROBLOX captcha) at this point, but we won't make you go through that torture."
                     } else if (points == 5) {
                         document.getElementById("messages").innerHTML = document.getElementById("messages").innerHTML + "<br>This is only the beginning..."
+                    } else if (points > 99999 && infActiveOnce != "potatoes") {
+                        var infinityBark = new Audio('papi_inf.mp3')
+                        infinityBark.loop = true
+                        infinityBark.play()
+                        document.getElementById("messages").innerHTML = document.getElementById("messages").innerHTML + "<br>You have won, and thus Papi will not let you continue."
+                        infActiveOnce = "potatoes"
+                    } else if (points > 99999) {
+                        points = 100000
                     }
+                    document.getElementById("points").innerHTML = points
                     dOld = new Date()
                     tOld = dOld.getTime()
                     console.log(tOld)
