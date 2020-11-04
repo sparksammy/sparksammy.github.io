@@ -1,9 +1,48 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>REDIRECT</title>
-<script>document.location.href = "https://sam290.wixsite.com/sparksammy"</script>
-<meta http-equiv="refresh" content="2; url = https://sam290.wixsite.com/sparksammy" />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <script>
+        function loadLocalPage(page) {
+            var html = ""
+            if (page == "home") {
+                html = `<h2>Hello, world! Welcome to my website.</h2><p>Welcome to sparkSammy.com! My name is Samuel Lord, but you can just call me Sparksammy. However, please spell the brand "sparkSammy" as sparkSammy. My skills are programming, eating, sleeping, working with computer-based technology. If you see any silly posts from me on social media, they are probably from a long time ago or it’s someone pretending to be me, so keep that in mind. Most importantly, enjoy my website!
+
+Want to donate some Bitcoin to me? Click <a href="https://coinrequest.io/request/NRa5Tpdsd5OlblE">here</a>, or scan this QR code.</p><img src="images-www/btc-qr-code.webp"></img>
+
+<br>
+<p><h3><i>Have a great one!</i></h3></p><p><h4><i>Peace!</i></h4></p><br><p align="center">"Be yourself; Everyone else is already taken".</p>
+<p align="right">--Oscar Wilde.</p>
+<p>"Find a balance between freedom, comfort, and flexibility; as there is no such thing as full freedom." ~~Samuel (Sparksammy) Lord</p>
+`
+            } else if (page == "blog") {
+                html = `<h2>Hello, world! Welcome to my blog!</h2> <hr> 10/31/2020 <h3>Hello, world!</h3><br> <p>Hello, my name is Samuel Lord, but you can call me Sparksammy! I worked quite a bit on this site, but now there's a huge banner for WiX. Oh well. It bothers me quite a bit, because I am stuck on the Free plan until I get a TON of cash, but I don't want to pay like 14$/month just to get a website builder. In fact, I prefer my software to be FOSS when it's feasible. Oh well. Good night.
+
+<br>
+Update: went to sleep at 3:20am. just finished the site. Mostly minor touches between then and now, but a lot of minor touches. Good night.
+<br>
+
+Update 2: Oops! I forgot to add this. "Find a balance between freedom, comfort, and flexibility; as there is no such thing as full freedom." ~~Samuel (Sparksammy) Lord</p>
+Update 3 (11/4/2020): This was when my site used WiX, made a few days before this version of the site.`
+            } else {
+                html = `<h2>404. Sorrry. :'(</h2>`
+            }
+            document.getElementById("mainScreen").innerHTML = html
+        }
+    </script>
 </head>
-<body><h1>Redirecting to newer site...</h1></body>
+
+<body>
+<div style="width:100vw; height:100%; text-align: center;"><h1>sparkSammy.com</h1><button class="btn btn-primary dropdown-toggle" data-toggle="dropdown">-></button> <ul class="dropdown-menu">
+      <li><a onclick="loadLocalPage('home')" href="#">Home</a></li>
+      <li><a onclick="loadLocalPage('blog')" href="#">Blog</a></li>
+      <li><a href="https://github.com/sparksammy">GitHub</a></li>
+</ul><hr></div>
+<div style="width: 100vw; height: 100%;" id="mainScreen"></div>
+<div style="width:100vw; height: 10vw;"><hr><p>Copyright Samuel Lord. All rights reserved.</p><p>Copying and redistribution of this entire page or parts of said page are permitted provided this notice is preserved.</p></div>
+<script>loadLocalPage("home")</script>
+</body>
+
 </html>
